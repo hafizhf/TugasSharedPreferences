@@ -24,7 +24,7 @@ class HomeActivity : AppCompatActivity() {
 
         // Get data dari SharedPreferences
         val sharedUsername = sharedPreferences.getString("name_key", "name_key")
-        tv_show_name.append(" $sharedUsername")
+        tv_show_name.append("$sharedUsername")
 
 
         btn_logout.setOnClickListener {

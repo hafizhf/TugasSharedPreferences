@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TugasSharedPreferences">
         <activity
+            android:name=".fragment.MainScreenActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".fragment.SplashScreenActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
             android:name=".HomeActivity"
             android:exported="true" />
         <activity
@@ -19,11 +34,13 @@
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 

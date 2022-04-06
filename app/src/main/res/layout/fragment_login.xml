@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
+<LinearLayout android:orientation="vertical"
     android:layout_margin="25dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".fragment.LoginFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
         android:layout_width="wrap_content"
@@ -66,16 +65,32 @@
         android:textSize="16sp"
         android:layout_marginBottom="5dp"/>
 
-    <EditText
-        android:id="@+id/et_password"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:hint="Your password"
-        android:inputType="textPassword"
-        android:padding="10dp"
-        android:background="#dddddd"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="20dp">
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="#dddddd"
+            android:hint="Your password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:padding="10dp" />
+
+        <ImageView
+            android:id="@+id/btn_show_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_show_pwd"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"/>
+
+    </RelativeLayout>
 
     <Button
         android:id="@+id/btn_login"
@@ -83,5 +98,32 @@
         android:layout_height="wrap_content"
         android:text="Login"
         android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/sign_up_question"
+            android:textSize="15sp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="5dp"/>
+
+        <TextView
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/purple_500"
+            android:text="@string/sign_up_btn"
+            android:textSize="15sp"
+            android:layout_marginBottom="5dp"/>
+
+    </LinearLayout>
 
 </LinearLayout>
